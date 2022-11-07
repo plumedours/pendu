@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Le jeu du Pendu</title>
-    <link rel="icon" type="image/ico" href="./img/hangman_0.png" />
+    <link rel="icon" type="image/ico" href="./img/hangman_7.png" />
     <link href="./dist/output.css" rel="stylesheet" />
   </head>
   <body>
@@ -25,7 +25,8 @@
             <div><h2 id="leMot" class="leading-loose">Mot à trouver :</h2></div>
             <div><p id="findWord" class="findWord leading-loose">______</p></div>
             <div>
-              <p id="leScore" class="leading-loose">Nombre d'essai : 0</p>
+              <p class="leading-loose">Nombre d'essai :</p>
+              <p id="wrongLabel">7</p>
             </div>
             <div><p class="leading-loose">Lettres incorrectes :</p></div>
             <div>
@@ -39,7 +40,7 @@
           </div>
         </div>
         <div class="bg-purple-400 w-full flex justify-center border">
-          <img id="lePendu" src="./img/hangman_7.png" alt="" srcset="" />
+          <img id="penduImg" src="./img/hangman_0.png" alt="" srcset="" />
         </div>
       </div>
       <div class="bg-gray-400 h-auto border">
