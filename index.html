@@ -10,20 +10,20 @@
   </head>
   <body>
     <div class="flex flex-col text-center gap-2">
-      <div class="bg-red-400 h-22 border">
+      <div class="bg-slate-100 h-22 border">
         <h1 class="text-xl font-bold">Le jeu du Pendu</h1>
         <p>
           Trouver le mot caché en moins de coup possible. 7 erreurs et c'est
           perdu !
         </p>
       </div>
-      <div class="flex flex-row justify-center bg-yellow-400">
-        <div class="bg-gray-400 w-full flex flex-col border">
-          <div
-            class="bg-rose-400 flex flex-col h-full justify-center items-center"
-          >
+      <div class="flex flex-row justify-center">
+        <div class="bg-slate-100 w-full flex flex-col border">
+          <div class="lex flex-col h-full justify-center items-center">
             <div><h2 id="leMot" class="leading-loose">Mot à trouver :</h2></div>
-            <div><p id="findWord" class="findWord leading-loose">______</p></div>
+            <div>
+              <p id="findWord" class="findWord leading-loose">______</p>
+            </div>
             <div>
               <p class="leading-loose">Nombre d'essai :</p>
               <p id="wrongLabel">7</p>
@@ -39,12 +39,11 @@
             </div>
           </div>
         </div>
-        <div class="bg-purple-400 w-full flex justify-center border">
+        <div class="bg-slate-100 w-full flex justify-center border">
           <img id="penduImg" src="./img/hangman_0.png" alt="" srcset="" />
         </div>
       </div>
-      <div class="bg-gray-400 h-auto border">
-        <h1>row3</h1>
+      <div id="keyboard" class="bg-slate-100 h-auto border">
         <div class="w-full">
           <button id="btn_a" class="letter bg-blue-400" type="button">A</button
           ><button id="btn_b" class="letter bg-blue-400" type="button">B</button
@@ -71,11 +70,18 @@
           ><button id="btn_w" class="letter bg-blue-400" type="button">W</button
           ><button id="btn_x" class="letter bg-blue-400" type="button">X</button
           ><button id="btn_y" class="letter bg-blue-400" type="button">Y</button
-          ><button id="btn_z" class="letter bg-blue-400" type="button">Z</button>
+          ><button id="btn_z" class="letter bg-blue-400" type="button">
+            Z
+          </button>
         </div>
       </div>
-      <div class="bg-green-400 h-10 border">
-        <h1>row4 footer</h1>
+      <div class="bg-slate-100 h-10 border">
+        <p>
+          Jeu du Pendu, par Maxime Bory -
+          <a href="https://www.plumedours.fr" target="_blank"
+            >www.plumedours.fr</a
+          >
+        </p>
       </div>
     </div>
     <script src="./app.js"></script>

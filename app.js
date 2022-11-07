@@ -3,6 +3,7 @@ const lettersBtn = document.querySelectorAll(".letter");
 const findWord = document.getElementById("findWord");
 const wrongLabel = document.getElementById("wrongLabel");
 const penduImg = document.getElementById("penduImg");
+const keyboard = document.getElementById("keyboard");
 
 let srcImg = 0;
 let inGame = false; //partie en cours ou non
@@ -15,7 +16,7 @@ let wordInGame = "";
 let wordsList = ["BONJOUR", "POMME", "ABRICOT", "CHIEN", "CHAT"];
 let arr = [];
 
-console.log(wordsList);
+console.log(inGame);
 
 function getRandomWord() {
   wordInGame = wordsList[Math.floor(Math.random() * wordsList.length)];
@@ -28,28 +29,36 @@ function getRandomWord() {
 }
 
 newGameBtn.addEventListener("click", () => {
+  keyboard.style.display = "block";
+  console.log(inGame);
   getRandomWord();
 });
 
 lettersBtn.forEach((letter) => {
-    letter.addEventListener("click", () => {
-      console.log(letter.textContent);
-      for (let i = 0; i < arrayWord.length; i++) {
-        if (letter.textContent === arrayWord[i]) {
-          hidden_word.splice(i, 1, letter.textContent);
-          console.log(arrayWord.indexOf(arrayWord[i]));
-          findWord.textContent = hidden_word.join(" ");
-          console.log(hidden_word);
-          // console.log(true);
-        } else {
-            // console.log(false);
-        }
+  letter.addEventListener("click", () => {
+    console.log(letter.textContent);
+
+    for (let i = 0; i < arrayWord.length; i++) {
+      if (letter.textContent === arrayWord[i]) {
+        hidden_word.splice(i, 1, letter.textContent);
+        console.log(arrayWord.indexOf(arrayWord[i]));
+        findWord.textContent = hidden_word.join(" ");
+        console.log(hidden_word);
+        // console.log(true);
       }
-      if(!wordInGame.includes(letter.textContent)) {
-        srcImg ++;
-        wrong --;
-        wrongLabel.textContent = wrong;
-        penduImg.src="./img/hangman_" + srcImg + ".png";
-      }
-    });
+      letter.disabled = true;
+    }
+
+    if (!wordInGame.includes(letter.textContent)) {
+      letter.classList.remove("bg-blue-400");
+      letter.classList.add("bg-red-400");
+      srcImg++;
+      wrong--;
+      wrongLabel.textContent = wrong;
+      penduImg.src = "./img/hangman_" + srcImg + ".png";
+    } else {
+      letter.classList.remove("bg-blue-400");
+      letter.classList.add("bg-green-400");
+    }
   });
+});
