@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="flex flex-col text-center gap-2">
-      <div class="bg-slate-100 h-22 border">
+      <div class="bg-slate-50 h-22 border">
         <h1 class="text-xl font-bold">Le jeu du Pendu</h1>
         <p>
           Trouver le mot caché en moins de coup possible. 7 erreurs et c'est
@@ -18,17 +18,16 @@
         </p>
       </div>
       <div class="flex flex-row justify-center">
-        <div class="bg-slate-100 w-full flex flex-col border">
-          <div class="lex flex-col h-full justify-center items-center">
-            <div><h2 id="leMot" class="leading-loose">Mot à trouver :</h2></div>
+        <div class="bg-slate-50 w-full flex flex-col border">
+          <div class="flex flex-col h-full justify-center">
+            <div><h2 class="leading-loose">Mot à trouver :</h2></div>
             <div>
-              <p id="findWord" class="findWord leading-loose">______</p>
+              <p id="findWord" class="findWord leading-loose"></p>
             </div>
             <div>
               <p class="leading-loose">Nombre d'essai :</p>
               <p id="wrongLabel">7</p>
             </div>
-            <div><p class="leading-loose">Lettres incorrectes :</p></div>
             <div>
               <button
                 id="newGameBtn"
@@ -39,11 +38,11 @@
             </div>
           </div>
         </div>
-        <div class="bg-slate-100 w-full flex justify-center border">
+        <div class="bg-slate-50 w-full flex justify-center border">
           <img id="penduImg" src="./img/hangman_0.png" alt="" srcset="" />
         </div>
       </div>
-      <div id="keyboard" class="bg-slate-100 h-auto border">
+      <div id="keyboard" class="bg-slate-50 h-auto border">
         <div class="w-full">
           <button id="btn_a" class="letter bg-blue-400" type="button">A</button
           ><button id="btn_b" class="letter bg-blue-400" type="button">B</button
@@ -75,14 +74,14 @@
           </button>
         </div>
       </div>
-      <div class="bg-slate-100 h-10 border">
+      <footer class="bg-slate-50 h-10 border">
         <p>
           Jeu du Pendu, par Maxime Bory -
           <a href="https://www.plumedours.fr" target="_blank"
             >www.plumedours.fr</a
           >
         </p>
-      </div>
+      </footer>
     </div>
     <script src="./app.js"></script>
   </body>
