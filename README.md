@@ -1,2 +1,2 @@
-# pendu
+# Pendu
 Le jeu du pendu
