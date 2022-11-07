@@ -1,0 +1,82 @@
+<!DOCTYPE class="bg-blue-400"CTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Le jeu du Pendu</title>
+    <link rel="icon" type="image/ico" href="./img/hangman_0.png" />
+    <link href="./dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="flex flex-col text-center gap-2">
+      <div class="bg-red-400 h-22 border">
+        <h1 class="text-xl font-bold">Le jeu du Pendu</h1>
+        <p>
+          Trouver le mot caché en moins de coup possible. 7 erreurs et c'est
+          perdu !
+        </p>
+      </div>
+      <div class="flex flex-row justify-center bg-yellow-400">
+        <div class="bg-gray-400 w-full flex flex-col border">
+          <div
+            class="bg-rose-400 flex flex-col h-full justify-center items-center"
+          >
+            <div><h2 id="leMot" class="leading-loose">Mot à trouver :</h2></div>
+            <div><p id="findWord" class="findWord leading-loose">______</p></div>
+            <div>
+              <p id="leScore" class="leading-loose">Nombre d'essai : 0</p>
+            </div>
+            <div><p class="leading-loose">Lettres incorrectes :</p></div>
+            <div>
+              <button
+                id="newGameBtn"
+                class="newGameBtn bg-blue-400 mt-10 px-3 py-2 m-1 text-white font-medium text-xl leading-tight rounded shadow-md hover:bg-blue-600 hover:shadow-lg"
+              >
+                Nouvelle partie
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-purple-400 w-full flex justify-center border">
+          <img id="lePendu" src="./img/hangman_7.png" alt="" srcset="" />
+        </div>
+      </div>
+      <div class="bg-gray-400 h-auto border">
+        <h1>row3</h1>
+        <div class="w-full">
+          <button id="btn_a" class="letter bg-blue-400" type="button">A</button
+          ><button id="btn_b" class="letter bg-blue-400" type="button">B</button
+          ><button id="btn_c" class="letter bg-blue-400" type="button">C</button
+          ><button id="btn_d" class="letter bg-blue-400" type="button">D</button
+          ><button id="btn_e" class="letter bg-blue-400" type="button">E</button
+          ><button id="btn_f" class="letter bg-blue-400" type="button">F</button
+          ><button id="btn_g" class="letter bg-blue-400" type="button">G</button
+          ><button id="btn_h" class="letter bg-blue-400" type="button">H</button
+          ><button id="btn_i" class="letter bg-blue-400" type="button">I</button
+          ><button id="btn_j" class="letter bg-blue-400" type="button">J</button
+          ><button id="btn_k" class="letter bg-blue-400" type="button">K</button
+          ><button id="btn_l" class="letter bg-blue-400" type="button">L</button
+          ><button id="btn_m" class="letter bg-blue-400" type="button">M</button
+          ><button id="btn_n" class="letter bg-blue-400" type="button">N</button
+          ><button id="btn_o" class="letter bg-blue-400" type="button">O</button
+          ><button id="btn_p" class="letter bg-blue-400" type="button">P</button
+          ><button id="btn_q" class="letter bg-blue-400" type="button">Q</button
+          ><button id="btn_r" class="letter bg-blue-400" type="button">R</button
+          ><button id="btn_s" class="letter bg-blue-400" type="button">S</button
+          ><button id="btn_t" class="letter bg-blue-400" type="button">T</button
+          ><button id="btn_u" class="letter bg-blue-400" type="button">U</button
+          ><button id="btn_v" class="letter bg-blue-400" type="button">V</button
+          ><button id="btn_w" class="letter bg-blue-400" type="button">W</button
+          ><button id="btn_x" class="letter bg-blue-400" type="button">X</button
+          ><button id="btn_y" class="letter bg-blue-400" type="button">Y</button
+          ><button id="btn_z" class="letter bg-blue-400" type="button">Z</button>
+        </div>
+      </div>
+      <div class="bg-green-400 h-10 border">
+        <h1>row4 footer</h1>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
