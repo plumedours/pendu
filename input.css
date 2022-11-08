@@ -3,17 +3,74 @@
 @tailwind utilities;
 
 body {
-    background-color: rgb(27, 37, 34);
+    @apply bg-slate-200;
 }
 
 .border {
-    @apply m-1 p-1 border-2 border-black rounded;
+    @apply m-1 p-1 rounded shadow-md shadow-slate-100;
 }
 
 button.letter {
-    @apply px-3 py-2 m-1 w-10 text-white font-medium text-xl leading-tight rounded shadow-md hover:bg-blue-600 hover:shadow-lg;
+    @apply px-3 py-2 m-1 w-10 text-white font-medium text-xl leading-tight rounded shadow-md;
 }
 
 .findWord {
     letter-spacing: 0.5em;
+}
+
+#keyboard {
+    display: none;
+}
+
+.modal-container {
+    /* display: block; */
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    transition: visibility 0.4s;
+}
+
+.modal-container.active {
+    /* display: block; */
+    visibility: visible;
+    transition: visibility 0s;
+}
+
+.overlay {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #333333d3;
+    transition: opacity 0.4s 0.2s ease-out;
+}
+
+.modal-container.active .overlay {
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.modal {
+    opacity: 0;
+    width: 95%;
+    max-width: 500px;
+    min-width: 300px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 50px));
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+}
+
+.modal-container.active .modal {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s 0.2s ease-out,
+    transform 0.4s 0.2s ease-out;
 }

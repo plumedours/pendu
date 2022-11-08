@@ -20,18 +20,18 @@
       <div class="flex flex-row justify-center">
         <div class="bg-slate-50 w-full flex flex-col border">
           <div class="flex flex-col h-full justify-center">
-            <div><h2 class="leading-loose">Mot à trouver :</h2></div>
+            <div><h2 class="leading-loose font-bold">Mot à trouver :</h2></div>
             <div>
-              <p id="findWord" class="findWord leading-loose"></p>
+              <p id="findWord" class="findWord leading-loose font-semibold"></p>
             </div>
             <div>
-              <p class="leading-loose">Nombre d'essai :</p>
-              <p id="wrongLabel">7</p>
+              <p class="leading-loose font-bold">Nombre d'essai :</p>
+              <p id="wrongLabel" class="font-semibold">7</p>
             </div>
             <div>
               <button
                 id="newGameBtn"
-                class="newGameBtn bg-blue-400 mt-10 px-3 py-2 m-1 text-white font-medium text-xl leading-tight rounded shadow-md hover:bg-blue-600 hover:shadow-lg"
+                class="newGameBtn bg-blue-400 mt-10 px-3 py-2 m-1 text-white font-medium text-xl leading-tight rounded shadow-md hover:bg-blue-500 hover:shadow-lg"
               >
                 Nouvelle partie
               </button>
@@ -82,6 +82,14 @@
           >
         </p>
       </footer>
+    </div>
+    <div class="modal-container">
+      <div class="overlay"></div>
+      <div class="modal flex flex-col">
+        <p class="winOrLoseLabel font-bold text-center">Win or Lose</p>
+        <p class="wordResponse font-semibold text-center">Response</p>
+        <button id="replayBtn" class="modal-trigger bg-blue-400 mt-10 px-3 py-2 m-1 text-white font-medium text-xl leading-tight rounded shadow-md hover:bg-blue-500 hover:shadow-lg">REJOUER</button>
+      </div>
     </div>
     <script src="./app.js"></script>
   </body>
